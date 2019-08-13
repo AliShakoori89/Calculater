@@ -8,7 +8,7 @@ class BotGUI():
     def __init__(self,master):
         self.equation = StringVar()
         master.title('Calculator') 
-        master.geometry("245x160") 
+        master.geometry("245x180") 
         expression_field = Entry(master,textvariable=self.equation,bg="light gray",width=40)
         expression_field.grid(row=0,column=0,columnspan=4,padx=1,pady=5) 
         self.equation.set('enter your expression') 
@@ -16,10 +16,8 @@ class BotGUI():
     def press(self,m):
         global expression 
         self.m=m   
-        #eqauation = StringVar()
         expression = expression + str(self.m)
         self.equation.set(expression)
-        #print(expression)
 
     def square(self):
         global expression
